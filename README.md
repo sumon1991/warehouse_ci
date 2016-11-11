@@ -1,1 +1,1 @@
-# warehouse_ci
+# warehouse CI project
