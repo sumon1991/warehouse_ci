@@ -523,6 +523,7 @@ $this->sma->checkPermissions(4,16,true);
                 'supplier4_part_no' => $this->input->post('supplier_4_part_no'),
                 'supplier5_part_no' => $this->input->post('supplier_5_part_no'),
             );
+
             $this->load->library('upload');
             if ($this->input->post('type') == 'standard') {
                 $wh_total_quantity = 0;

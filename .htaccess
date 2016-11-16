@@ -1,0 +1,7 @@
+RewriteEngine On
+RewriteBase /~warehouse/
+
+RewriteCond $1 !^(index\.php|themes|images|css|js|fonts|html|upload)
+RewriteRule ^(.*)$ /~warehouse/index.php?/$1 [L]
+
+
