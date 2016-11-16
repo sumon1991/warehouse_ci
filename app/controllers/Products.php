@@ -107,14 +107,14 @@ $this->sma->checkPermissions(4,9);
                 ->join('brands', 'products.brand=brands.id', 'left')
                 ->group_by("products.id");
         }
-        if (!$this->Owner && !$this->Admin) {
-            if (!$this->session->userdata('show_cost')) {
-                $this->datatables->unset_column("cost");
-            }
-            if (!$this->session->userdata('show_price')) {
-                $this->datatables->unset_column("price");
-            }
-        }
+        // if (!$this->Owner && !$this->Admin) {
+        //     if (!$this->session->userdata('show_cost')) {
+        //         $this->datatables->unset_column("cost");
+        //     }
+        //     if (!$this->session->userdata('show_price')) {
+        //         $this->datatables->unset_column("price");
+        //     }
+        // }
         $this->datatables->add_column("Actions", $action, "productid, image, code, name");
         echo $this->datatables->generate();
     }
